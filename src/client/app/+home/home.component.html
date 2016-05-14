@@ -1,13 +1,30 @@
-<p>
-  Howdy! Here's a list of awesome computer scientists.
-  Do you know any others? Add to the list yourself.
-</p>
+<h1>Movie search</h1>
 
-<form (submit)="addName()">
-  <input [(ngModel)]="newName" placeholder="Awesome Computer Scientist">
-  <button type="submit">Add</button>
+<h3>AMDB (Animal Movie DataBase) allows you to make a movie search given an animal keyword. Try it out!</h3>
+
+<form (submit)="movieSearch()">
+  <p>Enter an animal name here:</p>
+  <input [(ngModel)]="animalName" placeholder="Example: Black Cat" required>
+  <button type="submit">Search</button>
 </form>
 
+<div class="movieResultsWrapper" [hidden]="!formSubmitted">
+  You are searching for movies starring: <strong>{{animalName}}</strong>
+  <div class="movieResults">
+    [stub] Results
+  </div>
+</div>
+
+<!--
 <ul>
   <li *ngFor="let name of nameListService.get()">{{name}}</li>
 </ul>
+-->
+
+<!-- Debug area -->
+<div class="debug">
+  <h4>Debug area</h4>
+  animalName: {{animalName}}
+</div>
+
+

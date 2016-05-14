@@ -11,3 +11,13 @@ ul {
   list-style-type: none;
   padding: 0 0 0 8px;
 }
+
+.movieResultsWrapper {
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid grey;
+}
+
+.movieResults {
+  margin: 1em 0;
+}

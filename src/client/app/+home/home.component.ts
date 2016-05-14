@@ -9,8 +9,12 @@ import { NameListService } from '../shared/index';
   styleUrls: ['app/+home/home.component.css'],
   directives: [FORM_DIRECTIVES]
 })
+
 export class HomeComponent {
+
   newName: string;
+  formSubmitted: boolean;
+
   constructor(public nameListService: NameListService) {}
 
   /*
@@ -21,5 +25,10 @@ export class HomeComponent {
     this.nameListService.add(this.newName);
     this.newName = '';
     return false;
+  }
+
+  movieSearch(): void {
+    this.formSubmitted = true;
+    // add logic
   }
 }
