@@ -2,7 +2,7 @@
 
 <h3>AMDB (Animal Movie DataBase) allows you to make a movie search given an animal keyword. Try it out!</h3>
 
-<form (submit)="movieSearch()">
+<form (submit)="movieSearch(animalName)">
   <p>Enter an animal name here:</p>
   <input [(ngModel)]="animalName" placeholder="Example: Black Cat" required>
   <button type="submit">Search</button>
@@ -10,9 +10,11 @@
 
 <div class="movieResultsWrapper" [hidden]="!formSubmitted">
   You are searching for movies starring: <strong>{{animalName}}</strong>
-  <div class="movieResults">
-    [stub] Results
-  </div>
+  <ul class="movieResults">
+    <li *ngFor="let movie of moviesResult">
+      <b>{{movie.title}}</b> - <i>{{movie.plot}}</i>
+    </li>
+  </ul>
 </div>
 
 <!--

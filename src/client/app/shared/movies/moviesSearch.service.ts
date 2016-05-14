@@ -1,10 +1,10 @@
-// import { _ } from 
+import { MoviesDatabaseService } from './moviesDatabase.service'; 
+
+import { Inject } from '@angular/core';
 
 export class MoviesSearchService {
 
-  constructor() {
-    console.warn("tsssest");
-    window["foo"] = this;
+  constructor(@Inject(MoviesDatabaseService) private moviesDatabaseService: MoviesDatabaseService) {
   }
 
 
@@ -20,7 +20,8 @@ export class MoviesSearchService {
 
   search(keyword: string, limit: number = 20, sortByField?: string): any[] {
 
-    movies = _.filter(movies, (movie: any) => !movie.failed && movie.title)
+    var movies = this.moviesDatabaseService.retrieveAllMovies();
+    
     var foundMovies = this.searchMoviesByKeyword(movies, keyword);
 
 

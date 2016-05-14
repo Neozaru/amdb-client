@@ -18,15 +18,10 @@ import { MoviesSearchService} from '../shared/movies/moviesSearch.service';
 
 export class HomeComponent {
 
-  newName: string;
+  moviesResult: any[] = [];
   formSubmitted: boolean;
 
   constructor(public nameListService: NameListService, private moviesSearchService: MoviesSearchService) {}
-
-
-  searchMovies(keyword: string) {
-    return this.moviesSearchService.search(keyword);
-  }
 
   /*
    * @param newname  any text as input.
@@ -38,8 +33,9 @@ export class HomeComponent {
     return false;
   }
 
-  movieSearch(): void {
+  movieSearch(keyword: string): void {
     this.formSubmitted = true;
-    // add logic
+    console.warn("Searching terms : ", keyword)
+    this.moviesResult = this.moviesSearchService.search(keyword);
   }
 }
