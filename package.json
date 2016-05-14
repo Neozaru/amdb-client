@@ -114,7 +114,7 @@
     "yargs": "^4.2.0"
   },
   "dependencies": {
-        "@angular2-material/button": "^2.0.0-alpha.3",
+    "@angular2-material/button": "^2.0.0-alpha.3",
     "@angular2-material/card": "^2.0.0-alpha.3",
     "@angular2-material/checkbox": "^2.0.0-alpha.3",
     "@angular2-material/core": "^2.0.0-alpha.3",
