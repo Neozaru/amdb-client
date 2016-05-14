@@ -1,3 +1,13 @@
+amdb client
+===========
+
+Animal Movies Database
+Forked from (https://github.com/mgechev/angular2-seed)
+
+
+-----
+Original README
+
 # Introduction
 
 [![Angular 2 Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://github.com/mgechev/angular2-style-guide)
