@@ -36,6 +36,7 @@ export class ProjectConfig extends SeedConfig {
       { src: '@angular2-material/sidenav/sidenav.js', inject: 'libs' },
       { src: '@angular2-material/sidenav/sidenav.css', inject: true },
       { src: '@angular2-material/toolbar/toolbar.js', inject: 'libs' },
+      { src: 'underscore/underscore.js', inject: 'libs' },
       { src: '@angular2-material/toolbar/toolbar.css', inject: true }
     ];
 
