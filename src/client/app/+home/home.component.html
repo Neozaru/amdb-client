@@ -7,7 +7,7 @@
   <input [(ngModel)]="newName" placeholder="Awesome Computer Scientist">
   <button type="submit">Add</button>
 </form>
-
+<md-input [(ngModel)]="newName" placeholder="Awesome Computer Scientist" class="home-input"></md-input>
 
 <ul>
   <li *ngFor="let name of nameListService.get()">{{name}}</li>
